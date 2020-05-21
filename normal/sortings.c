@@ -47,3 +47,37 @@ void selection_sort_char(char *values, int length)
     swap_two_charecters(&values[i], &values[min_index]);
   }
 }
+
+void bubble_sort_int(int *values, int length)
+{
+  Bool is_sorted = False;
+  for (int i = 0; i < length - 1 && !is_sorted; i++)
+  {
+    is_sorted = True;
+    for (int j = 0; j < length - i - 1; j++)
+    {
+      if (!(values[j] < values[j + 1]))
+      {
+        is_sorted = False;
+        swap_two_integers(&values[j], &values[j + 1]);
+      }
+    }
+  }
+}
+
+void bubble_sort_char(char *values, int length)
+{
+  Bool is_sorted = False;
+  for (int i = 0; i < length - 1 && !is_sorted; i++)
+  {
+    is_sorted = True;
+    for (int j = 0; j < length - i - 1; j++)
+    {
+      if (!(values[j] < values[j + 1]))
+      {
+        is_sorted = False;
+        swap_two_charecters(&values[j], &values[j + 1]);
+      }
+    }
+  }
+}
