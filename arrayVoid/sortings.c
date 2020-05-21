@@ -42,3 +42,17 @@ void bubble_sort_elements(ArrayVoid_ptr values, Compare_Method *comparator)
     }
   }
 }
+
+void insertion_sort_elements(ArrayVoid_ptr values, Compare_Method *comparator)
+{
+  for (int i = 0; i < values->length; i++)
+  {
+    for (int j = 0; j < i; j++)
+    {
+      if ((*comparator)(values->elements[i], values->elements[j]))
+      {
+        swap_two_elements(&values->elements[i], &values->elements[j]);
+      }
+    }
+  }
+}
