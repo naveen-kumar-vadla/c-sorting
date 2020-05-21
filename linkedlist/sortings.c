@@ -52,3 +52,22 @@ void bubble_sort_list(List_ptr list, Compare_Method *comparator)
     }
   }
 }
+
+void insertion_sort_list(List_ptr list, Compare_Method *comparator)
+{
+  Node_ptr current_node = list->first;
+  Node_ptr compare_node;
+  for (int i = 0; i < list->length; i++)
+  {
+    compare_node = list->first;
+    for (int j = 0; j < i; j++)
+    {
+      if ((*comparator)(current_node->element, compare_node->element))
+      {
+        swap_two_elements(&current_node->element, &compare_node->element);
+      }
+      compare_node = compare_node->next;
+    }
+    current_node = current_node->next;
+  }
+}
