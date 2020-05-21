@@ -45,6 +45,7 @@ int main(void)
   PRINT_STRING("Enter a number of your choice");
   PRINT_STRING("1. Selection Sort");
   PRINT_STRING("2. Bubble Sort");
+  PRINT_STRING("3. Insertion Sort");
   scanf("%d", &choice);
 
   PRINT_STRING("\nbefore");
@@ -62,6 +63,11 @@ int main(void)
     PRINT_STRING("\nbubble sort");
     bubble_sort_int(numbers, length);
     bubble_sort_char(characters, length);
+    break;
+  case 3:
+    PRINT_STRING("\ninsertion sort");
+    insertion_sort_int(numbers, length);
+    insertion_sort_char(characters, length);
     break;
   default:
     PRINT_STRING("\nInvalid!!!");

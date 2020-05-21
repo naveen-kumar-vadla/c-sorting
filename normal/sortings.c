@@ -81,3 +81,31 @@ void bubble_sort_char(char *values, int length)
     }
   }
 }
+
+void insertion_sort_int(int *values, int length)
+{
+  for (int i = 0; i < length; i++)
+  {
+    for (int j = 0; j < i; j++)
+    {
+      if (values[i] < values[j])
+      {
+        swap_two_integers(&values[i], &values[j]);
+      }
+    }
+  }
+}
+
+void insertion_sort_char(char *values, int length)
+{
+  for (int i = 0; i < length; i++)
+  {
+    for (int j = 0; j < i; j++)
+    {
+      if (values[i] < values[j])
+      {
+        swap_two_charecters(&values[i], &values[j]);
+      }
+    }
+  }
+}
